@@ -33,9 +33,15 @@ public class Person implements Serializable{
     }
 
     public void setJsonView(){
-        this.view = "{\n\"firstName\" : \""+firstName+"\"" +
-                "\"lastName\" : "+lastName+"" +
-                "\"address\" : "+address+"\n}";
+        this.view = "{\"firstName\" : \""+firstName+"\"," +
+                "\"lastName\" : \""+lastName+"\"," +
+                "\"address\" : "+address+"}";
+    }
+    public void setPropertiesView(){
+        this.view = "firstName="+firstName+"\n" +
+                "lastName="+lastName+"\n" +
+                "address.street="+address.getStreet()+"\n" +
+                "address.city="+address.getCity();
     }
 
     @Override

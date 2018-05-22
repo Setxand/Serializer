@@ -10,6 +10,7 @@ public class Application {
         person.setLastName("Matt");
         person.setAddress(new Address("Lukasha","Lviv"));
         person.setJsonView();
+
         System.out.println(person);
     }
 }
