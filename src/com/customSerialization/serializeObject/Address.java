@@ -1,6 +1,10 @@
 package com.customSerialization.serializeObject;
 
-public class Address {
+import com.customSerialization.logic.impl.SerializerImpl;
+
+import java.io.Serializable;
+
+public class Address implements Serializable,SerObject {
     private String street;
     private String city;
 
@@ -25,9 +29,5 @@ public class Address {
         this.city = city;
     }
 
-    @Override
-    public String toString() {
-        return "{\"street\" : \""+street+"\"," +
-                "\"city\" : \""+city+"\"}";
-    }
+
 }
